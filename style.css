@@ -16,7 +16,7 @@ nav ul {
 }
 
 nav a {
-  color: red;
+  color: black;
   text-decoration: none;
 }
 
@@ -25,7 +25,7 @@ nav a {
   background-image: url('hero-image.jpeg');
   background-size: cover;
   background-position: center;
-  color: white;
+  color: black;
   text-align: center;
   padding: 100px 0;
 }
@@ -46,7 +46,38 @@ nav a {
 }
 
 .scroll-content {
+  width: 100%;
   display: inline-block;
+}
+
+.scroll-content img {
+  width: 200px;
+  height: 300px;
+}
+
+.polaroid {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.polaroid img {
+  width: 200px;
+  height: 300px;
+  border: 10px solid white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: rotate(-2deg);
+}
+
+.polaroid .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  text-align: center;
+  font-weight: bold;
 }
 
 /* Movies Section Styles */
