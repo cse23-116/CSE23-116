@@ -22,10 +22,10 @@ nav a {
 
 /*Hero Section Styles*/
 .hero {
-  background-image: url('Warner.jpg');
+  background-image: url('Movie.webp');
   background-size: cover;
   background-position: center;
-  color: black;
+  color: white;
   text-align: center;
   padding: 100px 0;
 }
