@@ -200,7 +200,9 @@ footer p {
   padding: 10px;
 }
 
-
+.show-sidebar {
+  left: 0;
+}
 
 
 
