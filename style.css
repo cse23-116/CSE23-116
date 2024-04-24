@@ -61,6 +61,10 @@ nav a {
   margin: 10px;
 }
 
+.polaroid:hover img {
+  transform:scale(1.1);
+}
+
 .polaroid img {
   width: 200px;
   height: 300px;
