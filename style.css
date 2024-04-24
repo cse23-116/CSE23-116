@@ -139,9 +139,11 @@ footer p {
   top: 0;
   left: -200px; /*Hides the sidebar*/
   width: 200px;
-  height: 100vh;
+  height: 100%;
   background-color: #f1f1f1;
   transition: left 0.3s ease;
+  left: 0;
+  top: 0;
 }
 
 .icon {
