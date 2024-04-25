@@ -3,40 +3,41 @@
 
 <head>
   <title>WarnerBros | Home of WB Movies, TV, Games, and more!</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    
+    input[type=text] {
+     right:0;
+     width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+     transition: width 0.4s ease-in-out;
+}
+
+/* Style for the search input field */
+input[type="search"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+}
+
+/* Style for the search button */
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+  </style>
 </head>
 
 <header>
+<form>
   <input type="text" name="search" placeholder="Search..">
-<!-- Slideshow container -->
-<div class="slideshow-container">
+  <button type="submit">Search</button>
+</header>
 
-  <!-- Full-width images with number and caption text -->
-  <div class="mySlides fade">
-    <!-- The video -->
-<video autoplay muted loop id="myVideo">
-  <source src="https://youtu.be/pHZdnopVgTI" type="video/mp4">
-</video>
+<body>
 
-<!-- Optional: some overlay text to describe the video -->
-<div class="content">
-  <h1>The Little Mermaid</h1>
-   <ul>
-     <li>Director: </li>
-     <li>Genre: </li>
-     <li>Release Date: </li>
-   </ul>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
-    <img src="Beekeper.jpg" style="width:100%">
-    <div class="text">The Beekeper</div>
-  </div>
-  
- <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
-    <img src="Ghostbusters.jpg" style="width:100%">
-    <div class="text">Ghostbusters: Frozen Empire</div>
-  </div>
-  </header>
+</body>
