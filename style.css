@@ -21,26 +21,6 @@ nav a {
   text-decoration: none;
 }
 
-/*Hero Section Styles*/
-.hero {
-  background-image: url('Movie.webp');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  text-align: center;
-  padding: 100px 0;
-}
-
-.hero h1 {
-  font-size: 36px;
-  margin-bottom:20px;
-}
-
-.hero p {
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-
 .scroll-container {
   overflow-x: scroll;
   white-space: nowrap;
@@ -80,7 +60,7 @@ nav a {
   left: 0;
   width: 100%;
   padding: 10px;
-  background-color: white;
+  background-color: grey;
   text-align: center;
   font-weight: bold;
 }
@@ -91,17 +71,18 @@ nav a {
 }
 
 .movies h2 {
+  color: white;
   font-size: 24px;
   margin-bottom: 20px;
 }
 
 /* TV Shows Section Styles */
 .tv-shows {
-  background-color: #f4f4f4;
   padding: 50px 0;
 }
 
 .tv-shows h2 {
+  color: white;
   font-size: 24px;
   margin-bottom: 20px;
 }
@@ -112,6 +93,7 @@ nav a {
 }
 
 .news h2 {
+  color: white;
   font-size: 24px;
   margin-bottom: 20px;
 }
@@ -131,12 +113,13 @@ footer p {
 
 /* Games Section Styles */
 .games {
-  background-color: #f4f4f4;
   padding: 50px 0;
 }
 
 .games h2 {
+  color: white;
   font-size: 20px;
+  margin-bottom: 20px;
 }
 
 
