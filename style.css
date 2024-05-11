@@ -109,17 +109,19 @@ footer {
   color: #fff;
   text-align: center;
   padding: 10px;
+  display: flex;
 }
 
 footer p {
   font-size: 14px;
   margin: right;
 }
+.left-content {
+  justify-self: flex-start;
+}
 
-footer h6 .logo {
-  object-position: left;
-  text-align: left;
-  font-family: 'Verdana', sans-serif;
+.right-content {
+  justify-self: flex-end;
 }
 
 .image-container {
