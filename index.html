@@ -5,252 +5,244 @@
   <meta charset="UTF-8">
   <title>WarnerBros | Home of WB Movies, TV, Games, and more!</title>
     <style>
-
-   *{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: 'Verdana', sans-serif;
-  }
-      
-  .nav-link.b:hover {
-    color: #7bdf1d;
-  }
-        
-.bottom-text-container1 {
-    cursor: pointer;
-  }
-        
-.preloader {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom:0;
-    right:0;
-    width: 100%;
-    height: 100vh;
-    z-index: 99999999;
-    background: url(''); /* your icon gif file path */
-    background-repeat: no-repeat;
-    background-color: black;
-    background-position: center;
-    }
-
-    #stop-scrolling {
-        height: 100%;
-        overflow: hidden;
-        }
-
-  body {
-    background-color: rgb(0, 0, 0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-      
-  .text-container {
-    width: 700px;
-    height: 100vh;
-    text-align: center;
-  }
-
-  .intro-container {
-    width: 370px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 1.2rem;
-  }
-      
-  .text-container h1 {
-    font-weight: 300;
-    color: #fff;
-    font-size: 3rem;
-  }
-      
-  span {
-    color: rgb(187, 14, 14);
-  }
-      
-  .text-container p {
-    color: #fff;
-    margin-top: 20px;
-  }
-      
-  .container-2 {
-    margin-top: 80px;
-  }
-      
-  .navbar-brand img{
-    width: 150px;
-    height: 150px;
-  }
-      
-  .images-container {
-    width: 100%;
-    height: 100vh;
-    background-color: #000;
-  }
-      
-  .group1 {
-    max-width: 250vw;
-    height: 329px;
-    display: flex;
-  }
-
-  .group1 .image {
-    width: 250px;
-    height: 100%;
-  }
-
-.text-container .button {
-    position: relative;
-    top: 100px;
-    padding: 13px 60px;
-    border-radius: 6px;
-  }
-      
-  .text-container .button {
-    color: #fff;
-    text-decoration: none;
-    background-color: rgb(165, 7, 7);
-    }
-      
-  .text-container .button:hover {
-    color: #fff;
-    text-decoration: none;
-    background-color: rgb(202, 6, 6);
-    transition:  all 500ms;
-  }
-      
-  .button {
-    color: #fff;
-    text-decoration: none;
-    background-color: rgb(165, 7, 7);
-    box-shadow: 0 5px #660707;
-    display: inline-block;
-    opacity: 0.9;
-  }
-      
-  .button:hover{
-    opacity: 1;
-  }
-      
-  .button:active {
-    position: relative;
-    box-shadow: none;
-    transform: translateY(3px);
-  }
-
-@media only screen and (max-width: 600px) {
-  .text-container h1 {
-    color: #fff;
-    font-size: 2.5rem;
-  }
-  
-  .container-2 {
-    margin-top: 50px;
-  }
+/* Body */
+body {
+  font-family: sans-serif; /* Set a default font family */
+  margin: 0; /* Remove default body margin */
+  padding: 0; /* Remove default body padding */
+  background-color: #f2f2f2; /* Set a light gray background color */
 }
-      
+
+/* Header */
+.header {
+  background-color: #141414; /* Set a dark background color for the header */
+  color: #fff; /* Set white text color for the header */
+  padding: 20px 0; /* Add top and bottom padding */
+  position: relative; /* Enable relative positioning for child elements */
+}
+
+.header .container {
+  max-width: 1200px; /* Set a maximum width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+  display: flex; /* Allow elements to sit next to each other */
+  justify-content: space-between; /* Distribute remaining space evenly between elements */
+  align-items: center; /* Align elements vertically at the center */
+}
+
+.header .overlay {
+  position: absolute; /* Make the overlay absolute within the header */
+  top: 0; /* Position to the top */
+  left: 0; /* Position to the left */
+  width: 100%; /* Span the full width of the header */
+  height: 100%; /* Span the full height of the header */
+  background-color: rgba(0, 0, 0, 0.3); /* Set a semi-transparent black background */
+  opacity: 0; /* Hide the overlay initially */
+  pointer-events: none; /* Prevent clicks from passing through to underlying elements */
+  transition: opacity 0.3s ease; /* Add a smooth opacity transition */
+}
+
+.header:hover .overlay {
+  opacity: 1; /* Show the overlay on hover */
+  pointer-events: auto; /* Allow clicks to pass through to underlying elements on hover */
+}
+
+.logo {
+  display: block; /* Makes the logo behave like a block element */
+  margin-right: 20px; /* Add margin to the right of the logo */
+}
+
+.logo img {
+  width: 150px; /* Set the logo image width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.header-actions {
+  display: flex; /* Allow elements to sit next to each other */
+  align-items: center; /* Align elements vertically at the center */
+}
+
+.search-btn,
+.lang-wrapper,
+.menu-open-btn {
+  margin-left: 20px; /* Add margin to the left of each button/wrapper */
+}
+
+.search-btn,
+.menu-open-btn {
+  background-color: transparent; /* Remove default button background color */
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.ion-icon {
+  font-size: 24px; /* Set the size of the ion icons */
+  color: inherit; /* Inherit the color from the parent element */
+}
+
+.lang-wrapper {
+  position: relative; /* Enable relative positioning for the dropdown */
+}
+
+.lang-wrapper label {
+  cursor: pointer; /* Change cursor to pointer on hover for the label */
+}
+
+.lang-wrapper select {
+  position: absolute; /* Make the select element absolute within the wrapper */
+  top: 100%; /* Position below the label */
+  left: 0; /* Position to the left */
+  width: 100%; /* Span the full width of the wrapper */
+  padding: 10px; /* Add padding to the select element */
+  border: 1px solid #ddd; /* Add a thin border */
+  border-radius: 4px; /* Add rounded corners */
+  background-color: #fff; /* Set white background color for the select element */
+  opacity: 0; /* Hide the select element initially */
+  pointer-events: none; /* Prevent clicks from interacting with the select element */
+  transition: opacity 0.3s ease; /* Add a smooth opacity transition */
+}
+
+.lang-wrapper:hover select {
+  opacity: 1; /* Show the select element on hover */
+  pointer-events: auto; /* Allow clicks to interact with the select element on hover */
 </style>
 </head>
 
-<body id="stop-scrolling">
-    <div class="preloader"></div>
+<body id="top">
 
-    <div class="text-container">
-      <div class="container-2">
-        <a class="navbar-brand" href="home.html" title="Home">
-          <img class="logo" src="Warner.gif" alt=""/>
-        </a>
-        <div class="intro-container">
-          <h1>WELCOME TO<br /><span>WarnerBros</span></h1>
-          <p>Home of WB Movies, TV, Games, and more!</p>
+  <!--- #HEADER -->
+
+  <header class="header" data-header>
+    <div class="container">
+      <div class="overlay" data-overlay></div>
+      <a href="home.html" class="logo">
+        <img src="Warner.gif" alt="Warner Bros logo">
+      </a>
+
+      <div class="header-actions">
+        <button class="search-btn">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+
+        <div class="lang-wrapper">
+          <label for="language">
+            <ion-icon name="globe-outline"></ion-icon>
+          </label>
+
+          <select name="language" id="language">
+            <option value="en">EN</option>
+            <option value="au">AU</option>
+            <option value="ar">AR</option>
+            <option value="tu">TU</option>
+          </select>
+
+      <button class="menu-open-btn" data-menu-open-btn>
+        <ion-icon name="reorder-two"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="index.html" class="logo">
+            <img src="Warner.gif" alt="Warner Bros logo">
+          </a>
+          <button class="menu-close-btn" data-menu-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
         </div>
-        <a href="#" class="button" onclick="myFunction()">Eplore Now</a>
-      </div>
+
+        <ul class="navbar-list">
+          <li><a href="home.html" class="navbar-link">Home</a></li>
+          <li><a href="movies.html" class="navbar-link">Movies</a></li>
+          <li><a href="shows.html" class="navbar-link">Tv Shows</a></li>
+          <li><a href="games.html" class="navbar-link">Games & Apps</a></li>
+          <li><a href="news.html" class="navbar-link">Latest News</a></li>
+          <li><a href="collections.html" class="navbar-link">Collections</a></li>
+          <li><a href="feedback.html" class="navbar-link">Feedback</a></li>
+        </ul>
+
+        <ul class="navbar-social-list">
+          <li>
+            <a href="twitter.com" class="navbar-social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="facebook.com" class="navbar-social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="pinterest.com" class="navbar-social-link">
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="instagram.com" class="navbar-social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="youtube.com" class="navbar-social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
     </div>
+  </header>
 
-   <div class="images-container">
-      <marquee behavior="alternate" direction="left" scrollamount="8.4">
-        // marquee - it defines a scrolling area in the HTML document that moves across the page any direction
-        <div class="group1">
-          <div class="image">
-            <img src="./Images/super-girl.jpg" alt="super girl" />
-          </div>
-          <div class="image">
-            <img src="Star.jpg" alt="" /> // The alt attribute specifies an alternate text for an area, if the image cannot be displayed 
-          </div>
-          <div class="image">
-            <img src="Young.jpg" alt="" />
-          </div>
-          <div class="image">
-            <img src="Real.jpg" alt="" />
-          </div>
-          <div class="image">
-            <img src="Modern.jpg" alt="" />
-          </div>
-          <div class="image">
-            <img src="Journey.jpg" alt="" />
-          </div>
-          <div class="image">
-            <img
-              src="Grown.jpg" alt="" />
-          </div>
-          <div class="image">
-            <img src="Beekeper.jpg" alt="" />
-          </div>
-          <div class="image">
-            <img src="Mermaid.jpg" alt="" />
-          </div>
-          <div class="image">
-            <img src="Among.jpg" alt="" />
-          </div>
-          <div class="image">
-            <img src="Batman.jpg" alt="" />
-          </div>
-          <div class="image">
-            <img src="Dune.jpg" alt="" />
-          </div>
-          <div class="image">
-            <img src="Family.jpg" alt="" />
-          </div>
-          <div class="image">
-            <img src="Ellen.jpg" alt="" />
-          </div>
-          <div class="image">
-            <img src="Ghostbusters.jpg" alt="" />
-          </div>
-          <div class="image">
-            <img src="Gilmore.jpg" alt="" />
-          </div>
-          <div class="image">
-            <img src="Immaculate.jpg" alt="" />
-          </div>
-          <div class="image">
-            <img src="Godzilla.jpg" alt="" />
-          </div>
-          <div class="image">
-            <img src="Girl.jpg" alt="" />
+  <main>
+    <article>
+
+      <!--- #HERO -->
+
+      <section class="hero">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">Warner Bros</p>
+
+            <h1 class="h1 hero-title">
+              Home of <strong>WB Movies</strong>, TVs Shows, & More.
+            </h1>
+
+            <div class="meta-wrapper">
+
+              <div class="badge-wrapper">
+                <div class="badge badge-fill">PG 18</div>
+                <div class="badge badge-outline">HD</div>
+              </div>
+
+              <div class="ganre-wrapper">
+                <a href="#">Romance,</a>
+                <a href="#">Drama</a>
+              </div>
+
+              <div class="date-time">
+                <div>
+                  <ion-icon name="calendar-outline"></ion-icon>
+                  <time datetime="2022">2022</time>
+                </div>
+
+                <div>
+                  <ion-icon name="time-outline"></ion-icon>
+                  <time datetime="PT128M">128 min</time>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-primary">
+              <ion-icon name="play"></ion-icon>
+              <span>Watch now</span>
+            </button>
           </div>
         </div>
-      </marquee>
-
-      <marquee behavior="alternate" direction="right" scrollamount="8.7" scrolldelay="77">
-
-     <script>
-      function preloaderFadeOutInit() {
-        $(".preloader").fadeOut("slow"); // will first fade out the loading animation
-        $("body").attr("id", ""); // will fade out the whole DIV that covers the website.
-      }
-      // Window load function
-      jQuery(window).on("load", function () {
-        // makes sure the whole site is loaded
-        (function ($) {
-          preloaderFadeOutInit();
-        })(jQuery);
-      });
-    </script>
+      </section>
+      
 </body>
 </html>
