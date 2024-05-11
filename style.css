@@ -1,6 +1,6 @@
 body {
-  background-image: url('Film.jpg');
-  font-family: serif;
+  background-color: black;
+  font-family: 'Verdana', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -74,6 +74,7 @@ nav a {
   color: white;
   font-size: 24px;
   margin-bottom: 20px;
+  font-family: 'Verdana', sans-serif;
 }
 
 /* TV Shows Section Styles */
@@ -85,6 +86,7 @@ nav a {
   color: white;
   font-size: 24px;
   margin-bottom: 20px;
+  font-family: 'Verdana', sans-serif;
 }
 
 /* News Section Styles */
@@ -96,6 +98,7 @@ nav a {
   color: white;
   font-size: 24px;
   margin-bottom: 20px;
+  font-family: 'Verdana', sans-serif;
 }
 
 /* Footer Styles */
@@ -120,18 +123,177 @@ footer p {
   color: white;
   font-size: 24px;
   margin-bottom: 20px;
+  font-family: 'Verdana', sans-serif;
 }
 
-.topnav {
+body {
+  background: black; 
+}
+
+.section-heading {
+  font-size: var(--section-heading);
+  font-weight: normal;
+  margin-bottom: 60px;
+}
+
+/* main container style */
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+}
+
+/* navbar style */
+
+.navbar {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+}
+
+/* small screen menu button style */
+
+.navbar-menu-btn { 
+  display: none; 
+}
+
+/* navbar navigation style */
+
+nav {
+  margin-right: 200px; 
+}
+
+.navbar-nav {
+  display: flex; 
+}
+
+.navbar-nav li:not(:last-child) {
+  margin-right: 60px; 
+}
+
+.navbar-link {
+  font-size: var(--fs-sm);
+  font-weight: normal;
+}
+
+.navbar-link:hover {
+  color: #F0FFFF; 
+}
+
+/* banner card style */
+
+.banner { margin-bottom: 60px; }
+
+.banner-card {
+  position: relative;
+  height: 400px;
   overflow: hidden;
-  background-color: grey;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.banner-card:hover {
+  transform: scale(1.1);
+}
+
+.banner-card .banner-content {
+  position: absolute;
+  right:  80px;
+  bottom: 60px;
+  left:   80px;
+}
+
+.banner-card .banner-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.banner-card .banner-info div {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.banner-card .banner-info ion-icon {
+  font-size: 20px;
+  color: white;
+  margin-right: 5px;
+}
+
+.banner-card .banner-info span { 
+  font-weight: normal; 
+  color: white;
+}
+
+.banner-card .banner-info .quality {
+  background: #00FFFF;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-weight: normal;
+}
+
+.banner-card .card-title {
+  font-size: 3em;
+  color: white;
+  text-shadow: 2px 0 2px #0007;
+}
+
+.banner video {
+  position: absolute; /* Overlaps the entire banner section */
+  top: 0; /* Position to the top */
+  left: 0; /* Position to the left */
+  width: 100%; /* Span the full width and height of the banner */
+  height: 100%; /* Ensure the video fills the entire banner area */
+  object-fit: cover; /* Scale the video to cover the entire area while maintaining aspect ratio */
+}
+
+/* navbar form & button style */
+.navbar-form {
+  position: relative;
+  margin-right: 50px;
+}
+
+.navbar-form-search {
+  background: var(--oxford-blue);
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 15px;
+  color: var(--off-white);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-5);
+}
+
+.navbar-form-btn {
+  background: var(--oxford-blue);
+  position: absolute;
+  top:   calc(50% - 10px);
+  right: 10px;
+}
+
+.navbar-form-btn ion-icon,
+.navbar-search-btn ion-icon {
+  font-size: 20px;
+  color: var(--light-azure);
+  --ionicon-stroke-width: 50px;
+}
+
+.navbar-form-btn:hover ion-icon,
+.navbar-form-search::placeholder { 
+  color: var(--off-white); 
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: black;
+  overflow: hidden;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
-  display: block;
-  color: black;
+  color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -144,7 +306,13 @@ footer p {
   color: black;
 }
 
-/* Style the search box inside the navigation bar */
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: grey;
+  color: white;
+}
+
+ /* Style the search box inside the navigation bar */
 .topnav input[type=text] {
   float: right;
   padding: 6px;
@@ -153,4 +321,3 @@ footer p {
   margin-right: 16px;
   font-size: 17px;
 }
-
