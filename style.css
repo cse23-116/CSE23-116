@@ -52,6 +52,7 @@ nav a {
   border: 10px solid black;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transform: rotate(-2deg);
+  font-color: white;
 }
 
 .polaroid .caption {
