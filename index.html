@@ -5,244 +5,220 @@
   <meta charset="UTF-8">
   <title>WarnerBros | Home of WB Movies, TV, Games, and more!</title>
     <style>
-/* Body */
-body {
-  font-family: sans-serif; /* Set a default font family */
-  margin: 0; /* Remove default body margin */
-  padding: 0; /* Remove default body padding */
-  background-color: #f2f2f2; /* Set a light gray background color */
+
+header, nav {
+  background: rich-black-fogra-29; 
 }
 
-/* Header */
-.header {
-  background-color: #141414; /* Set a dark background color for the header */
-  color: #fff; /* Set white text color for the header */
-  padding: 20px 0; /* Add top and bottom padding */
-  position: relative; /* Enable relative positioning for child elements */
+.navbar,
+.banner,
+.movies,
+.tv shows,
+.games,
+.news,
+.collections,
+.feedback {
+  padding: 0px;
 }
 
-.header .container {
-  max-width: 1200px; /* Set a maximum width for the container */
-  margin: 0 auto; /* Center the container horizontally */
-  display: flex; /* Allow elements to sit next to each other */
-  justify-content: space-between; /* Distribute remaining space evenly between elements */
-  align-items: center; /* Align elements vertically at the center */
+.section-heading {
+  font-size: var(--section-heading);
+  font-weight: normal;
+  margin-bottom: 60px;
 }
 
-.header .overlay {
-  position: absolute; /* Make the overlay absolute within the header */
-  top: 0; /* Position to the top */
-  left: 0; /* Position to the left */
-  width: 100%; /* Span the full width of the header */
-  height: 100%; /* Span the full height of the header */
-  background-color: rgba(0, 0, 0, 0.3); /* Set a semi-transparent black background */
-  opacity: 0; /* Hide the overlay initially */
-  pointer-events: none; /* Prevent clicks from passing through to underlying elements */
-  transition: opacity 0.3s ease; /* Add a smooth opacity transition */
+/* main container style */
+
+.container {
+  max-width: 1440px;
+  margin: auto;
 }
 
-.header:hover .overlay {
-  opacity: 1; /* Show the overlay on hover */
-  pointer-events: auto; /* Allow clicks to pass through to underlying elements on hover */
+/* navbar style */
+
+.navbar {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo {
-  display: block; /* Makes the logo behave like a block element */
-  margin-right: 20px; /* Add margin to the right of the logo */
+/* small screen menu button style */
+
+.navbar-menu-btn { 
+  display: none; 
 }
 
-.logo img {
-  width: 150px; /* Set the logo image width */
-  height: auto; /* Maintain aspect ratio */
+/* navbar navigation style */
+
+nav {
+  margin-right: 200px; 
 }
 
-.header-actions {
-  display: flex; /* Allow elements to sit next to each other */
-  align-items: center; /* Align elements vertically at the center */
+.navbar-nav {
+  display: flex; 
 }
 
-.search-btn,
-.lang-wrapper,
-.menu-open-btn {
-  margin-left: 20px; /* Add margin to the left of each button/wrapper */
+.navbar-nav li:not(:last-child) {
+  margin-right: 60px; 
 }
 
-.search-btn,
-.menu-open-btn {
-  background-color: transparent; /* Remove default button background color */
-  border: none; /* Remove default button border */
-  cursor: pointer; /* Change cursor to pointer on hover */
+.navbar-link {
+  font-size: var(--fs-sm);
+  font-weight: normal;
 }
 
-.ion-icon {
-  font-size: 24px; /* Set the size of the ion icons */
-  color: inherit; /* Inherit the color from the parent element */
+.navbar-link:hover {
+  color: #F0FFFF; 
 }
 
-.lang-wrapper {
-  position: relative; /* Enable relative positioning for the dropdown */
+/* banner card style */
+
+.banner { margin-bottom: 60px; }
+
+.banner-card {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
-.lang-wrapper label {
-  cursor: pointer; /* Change cursor to pointer on hover for the label */
+.banner-img { 
+  object-position: top; 
 }
 
-.lang-wrapper select {
-  position: absolute; /* Make the select element absolute within the wrapper */
-  top: 100%; /* Position below the label */
-  left: 0; /* Position to the left */
-  width: 100%; /* Span the full width of the wrapper */
-  padding: 10px; /* Add padding to the select element */
-  border: 1px solid #ddd; /* Add a thin border */
-  border-radius: 4px; /* Add rounded corners */
-  background-color: #fff; /* Set white background color for the select element */
-  opacity: 0; /* Hide the select element initially */
-  pointer-events: none; /* Prevent clicks from interacting with the select element */
-  transition: opacity 0.3s ease; /* Add a smooth opacity transition */
+.banner-card:hover .banner-img {
+  transform: scale(1.1);
 }
 
-.lang-wrapper:hover select {
-  opacity: 1; /* Show the select element on hover */
-  pointer-events: auto; /* Allow clicks to interact with the select element on hover */
+.banner-card .card-content {
+  position: absolute;
+  right:  80px;
+  bottom: 60px;
+  left:   80px;
+}
+
+.banner-card .card-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.banner-card .card-info div {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.banner-card .card-info ion-icon {
+  font-size: 20px;
+  color: #00FFFF;
+  margin-right: 5px;
+}
+
+.banner-card .card-info span { 
+  font-weight: normal; 
+}
+
+.banner-card .card-info .quality {
+  background: #00FFFF;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-weight: normal;
+}
+
+.banner-card .card-title {
+  font-size: 3em;
+   color: white;
+  text-shadow: 2px 0 2px #0007;
+}
+
 </style>
 </head>
 
-<body id="top">
+ <!--- #HEADER SECTION -->
 
-  <!--- #HEADER -->
+    <header class="">
+      <div class="navbar">
 
-  <header class="header" data-header>
-    <div class="container">
-      <div class="overlay" data-overlay></div>
-      <a href="home.html" class="logo">
-        <img src="Warner.gif" alt="Warner Bros logo">
-      </a>
-
-      <div class="header-actions">
-        <button class="search-btn">
-          <ion-icon name="search-outline"></ion-icon>
+        <!--- menu button for small screen -->
+        <button class="navbar-menu-btn">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
         </button>
 
-        <div class="lang-wrapper">
-          <label for="language">
-            <ion-icon name="globe-outline"></ion-icon>
-          </label>
+        <a href="#" class="navbar-brand">
+          <img src="Warner.gif" alt="Warner Bros Logo">
+        </a>
 
-          <select name="language" id="language">
-            <option value="en">EN</option>
-            <option value="au">AU</option>
-            <option value="ar">AR</option>
-            <option value="tu">TU</option>
-          </select>
+        <!--- navbar navigation -->
 
-      <button class="menu-open-btn" data-menu-open-btn>
-        <ion-icon name="reorder-two"></ion-icon>
-      </button>
+        <nav class="">
+          <ul class="navbar-nav">
 
-      <nav class="navbar" data-navbar>
-        <div class="navbar-top">
-          <a href="index.html" class="logo">
-            <img src="Warner.gif" alt="Warner Bros logo">
-          </a>
-          <button class="menu-close-btn" data-menu-close-btn>
-            <ion-icon name="close-outline"></ion-icon>
-          </button>
-        </div>
+            <li> <a href="home.html" class="navbar-link">Home</a> </li>
+            <li> <a href="movies.html" class="navbar-link">Movies</a> </li>
+            <li> <a href="shows.html" class="navbar-link">TV Shows</a> </li>
+            <li> <a href="games.html" class="navbar-link">Games & Apps</a> </li>
+            <li> <a href="news.html" class="navbar-link">Latest News</a> </li>
+            <li> <a href="collections.html" class="navbar-link">Collections</a> </li>
+            <li> <a href="feedback.html" class="navbar-link">Feedback</a> </li>
 
-        <ul class="navbar-list">
-          <li><a href="home.html" class="navbar-link">Home</a></li>
-          <li><a href="movies.html" class="navbar-link">Movies</a></li>
-          <li><a href="shows.html" class="navbar-link">Tv Shows</a></li>
-          <li><a href="games.html" class="navbar-link">Games & Apps</a></li>
-          <li><a href="news.html" class="navbar-link">Latest News</a></li>
-          <li><a href="collections.html" class="navbar-link">Collections</a></li>
-          <li><a href="feedback.html" class="navbar-link">Feedback</a></li>
-        </ul>
+          </ul>
+        </nav>
 
-        <ul class="navbar-social-list">
-          <li>
-            <a href="twitter.com" class="navbar-social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
+        <!--- search -->
 
-          <li>
-            <a href="facebook.com" class="navbar-social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
+        <div class="navbar-actions">
 
-          <li>
-            <a href="pinterest.com" class="navbar-social-link">
-              <ion-icon name="logo-pinterest"></ion-icon>
-            </a>
-          </li>
+          <form action="#" class="navbar-form">
+            <input type="text" name="search" placeholder="I'm looking for..." class="navbar-form-search">
 
-          <li>
-            <a href="instagram.com" class="navbar-social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="youtube.com" class="navbar-social-link">
-              <ion-icon name="logo-youtube"></ion-icon>
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-    </div>
-  </header>
-
-  <main>
-    <article>
-
-      <!--- #HERO -->
-
-      <section class="hero">
-        <div class="container">
-
-          <div class="hero-content">
-
-            <p class="hero-subtitle">Warner Bros</p>
-
-            <h1 class="h1 hero-title">
-              Home of <strong>WB Movies</strong>, TVs Shows, & More.
-            </h1>
-
-            <div class="meta-wrapper">
-
-              <div class="badge-wrapper">
-                <div class="badge badge-fill">PG 18</div>
-                <div class="badge badge-outline">HD</div>
-              </div>
-
-              <div class="ganre-wrapper">
-                <a href="#">Romance,</a>
-                <a href="#">Drama</a>
-              </div>
-
-              <div class="date-time">
-                <div>
-                  <ion-icon name="calendar-outline"></ion-icon>
-                  <time datetime="2022">2022</time>
-                </div>
-
-                <div>
-                  <ion-icon name="time-outline"></ion-icon>
-                  <time datetime="PT128M">128 min</time>
-                </div>
-              </div>
-            </div>
-
-            <button class="btn btn-primary">
-              <ion-icon name="play"></ion-icon>
-              <span>Watch now</span>
+            <button class="navbar-form-btn">
+              <ion-icon name="search-outline"></ion-icon>
             </button>
+
+            <button class="navbar-form-close">
+              <ion-icon name="close-circle-outline"></ion-icon>
+            </button>
+          </form>
+    </header>
+
+    <!--- MAIN SECTION -->
+    <main>
+
+      <!--- #BANNER SECTION -->
+      <section class="banner">
+        <div class="banner-card">
+
+          <img src="Damsel.jpg" class="banner-img" alt="">
+
+          <div class="card-content">
+            <div class="card-info">
+
+              <div class="genre">
+                <ion-icon name="film"></ion-icon>
+                <span>Action/Adventure</span>
+              </div>
+
+              <div class="year">
+                <ion-icon name="calendar"></ion-icon>
+                <span>2024</span>
+              </div>
+
+              <div class="duration">
+                <ion-icon name="time"></ion-icon>
+                <span>1h 49m</span>
+              </div>
+              <div class="quality">4K</div>
+            </div>
+            <h2 class="card-title">Damsel</h2>
           </div>
+
         </div>
       </section>
-      
+   
 </body>
 </html>
