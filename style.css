@@ -118,10 +118,12 @@ footer p {
 }
 .left-content {
   justify-self: flex-start;
+  justify-content: space-between;
 }
 
 .right-content {
   justify-self: flex-end;
+  justify-content: space-between;
 }
 
 .image-container {
