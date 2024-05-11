@@ -174,14 +174,13 @@
 
    <div class="images-container">
       <marquee behavior="alternate" direction="left" scrollamount="8.4">
-        /* marquee - it defines a scrolling area in the HTML document that moves
-        across the page any direction. */
+        // marquee - it defines a scrolling area in the HTML document that moves across the page any direction
         <div class="group1">
           <div class="image">
             <img src="./Images/super-girl.jpg" alt="super girl" />
           </div>
           <div class="image">
-            <img src="Star.jpg" alt="" /> /* The alt attribute specifies an alternate text for an area, if the image cannot be displayed */
+            <img src="Star.jpg" alt="" /> // The alt attribute specifies an alternate text for an area, if the image cannot be displayed 
           </div>
           <div class="image">
             <img src="Young.jpg" alt="" />
@@ -239,5 +238,19 @@
       </marquee>
 
       <marquee behavior="alternate" direction="right" scrollamount="8.7" scrolldelay="77">
+
+     <script>
+      function preloaderFadeOutInit() {
+        $(".preloader").fadeOut("slow"); // will first fade out the loading animation
+        $("body").attr("id", ""); // will fade out the whole DIV that covers the website.
+      }
+      // Window load function
+      jQuery(window).on("load", function () {
+        // makes sure the whole site is loaded
+        (function ($) {
+          preloaderFadeOutInit();
+        })(jQuery);
+      });
+    </script>
 </body>
 </html>
