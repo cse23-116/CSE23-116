@@ -91,45 +91,40 @@ nav {
   cursor: pointer;
 }
 
-.banner-img { 
-  object-position: top; 
-  width: 100%;
-}
-
-.banner-card:hover .banner-img {
+.banner-card:hover {
   transform: scale(1.1);
 }
 
-.banner-card .card-content {
+.banner-card .banner-content {
   position: absolute;
   right:  80px;
   bottom: 60px;
   left:   80px;
 }
 
-.banner-card .card-info {
+.banner-card .banner-info {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.banner-card .card-info div {
+.banner-card .banner-info div {
   display: flex;
   align-items: center;
   margin-right: 20px;
 }
 
-.banner-card .card-info ion-icon {
+.banner-card .banner-info ion-icon {
   font-size: 20px;
   color: #00FFFF;
   margin-right: 5px;
 }
 
-.banner-card .card-info span { 
+.banner-card .banner-info span { 
   font-weight: normal; 
 }
 
-.banner-card .card-info .quality {
+.banner-card .banner-info .quality {
   background: #00FFFF;
   padding: 2px 5px;
   border-radius: 5px;
@@ -140,6 +135,56 @@ nav {
   font-size: 3em;
    color: white;
   text-shadow: 2px 0 2px #0007;
+}
+
+.banner video {
+  position: absolute; /* Overlaps the entire banner section */
+  top: 0; /* Position to the top */
+  left: 0; /* Position to the left */
+  width: 100%; /* Span the full width and height of the banner */
+  height: 100%; /* Ensure the video fills the entire banner area */
+  object-fit: cover; /* Scale the video to cover the entire area while maintaining aspect ratio */
+}
+
+/* navbar form & button style */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-form {
+  position: relative;
+  margin-right: 50px;
+}
+
+.navbar-form-search {
+  background: var(--oxford-blue);
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 15px;
+  color: var(--off-white);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-5);
+}
+
+.navbar-form-btn {
+  background: var(--oxford-blue);
+  position: absolute;
+  top:   calc(50% - 10px);
+  right: 10px;
+}
+
+.navbar-form-btn ion-icon,
+.navbar-search-btn ion-icon {
+  font-size: 20px;
+  color: var(--light-azure);
+  --ionicon-stroke-width: 50px;
+}
+
+.navbar-form-btn:hover ion-icon,
+.navbar-form-search::placeholder { 
+  color: var(--off-white); 
 }
 
 </style>
@@ -201,10 +246,12 @@ nav {
       <section class="banner">
         <div class="banner-card">
 
-          <img src="Damsel.jpg" class="banner-img" alt="">
+  <video autoplay muted loop poster="Damsel.jpg">
+    <source src="Damsel.mp4" type="video/mp4">
+  </video>
 
-          <div class="card-content">
-            <div class="card-info">
+          <div class="banner-content">
+            <div class="banner-info">
 
               <div class="genre">
                 <ion-icon name="film"></ion-icon>
