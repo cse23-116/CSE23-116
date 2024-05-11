@@ -87,6 +87,11 @@
     display: flex;
   }
 
+  .group1 .image {
+    width: 250px;
+    height: 100%;
+  }
+
 .text-container .button {
     position: relative;
     top: 100px;
@@ -124,10 +129,20 @@
     position: relative;
     box-shadow: none;
     transform: translateY(3px);
-    
   }
 
-    </style>
+@media only screen and (max-width: 600px) {
+  .text-container h1 {
+    color: #fff;
+    font-size: 2.5rem;
+  }
+  
+  .container-2 {
+    margin-top: 50px;
+  }
+}
+      
+</style>
 </head>
 
 <body id="stop-scrolling">
