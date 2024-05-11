@@ -147,12 +147,6 @@ nav {
 }
 
 /* navbar form & button style */
-
-.navbar-actions {
-  display: flex;
-  align-items: center;
-}
-
 .navbar-form {
   position: relative;
   margin-right: 50px;
@@ -208,26 +202,18 @@ nav {
 
         <!--- navbar navigation -->
 
-        <nav class="">
-          <ul class="navbar-nav">
-
-            <li> <a href="home.html" class="navbar-link">Home</a> </li>
-            <li> <a href="movies.html" class="navbar-link">Movies</a> </li>
-            <li> <a href="shows.html" class="navbar-link">TV Shows</a> </li>
-            <li> <a href="games.html" class="navbar-link">Games & Apps</a> </li>
-            <li> <a href="news.html" class="navbar-link">Latest News</a> </li>
-            <li> <a href="collections.html" class="navbar-link">Collections</a> </li>
-            <li> <a href="feedback.html" class="navbar-link">Feedback</a> </li>
-
-          </ul>
-        </nav>
+ <div class="topnav">
+  <a class="active" href="index.html">Home</a>
+  <a href="movies.html">Movies</a>
+  <a href="shows.html">TV Shows</a>
+  <a href="games.html">Games & Apps</a>
+  <a href="news.html">Latest News</a>
+  <a href="collections.html">Collections</a>
+  <a href="feedback.html">Feedback</a>
+  <input type="text" placeholder="Search..">
+</div>
 
         <!--- search -->
-
-        <div class="navbar-actions">
-
-          <form action="#" class="navbar-form">
-            <input type="text" name="search" placeholder="I'm looking for..." class="navbar-form-search">
 
             <button class="navbar-form-btn">
               <ion-icon name="search-outline"></ion-icon>
@@ -236,7 +222,6 @@ nav {
             <button class="navbar-form-close">
               <ion-icon name="close-circle-outline"></ion-icon>
             </button>
-          </form>
     </header>
 
     <!--- MAIN SECTION -->
