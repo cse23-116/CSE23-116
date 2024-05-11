@@ -113,7 +113,17 @@ footer {
 
 footer p {
   font-size: 14px;
-  margin: 0;
+  margin: right;
+}
+
+footer h6 .logo {
+  object-position: left;
+  text-align: left;
+  font-family: 'Verdana', sans-serif;
+}
+
+.image-container {
+  background-color: #333;
 }
 
 /* Games Section Styles */
@@ -325,3 +335,4 @@ nav {
 .logo {
   position: left;
 }
+
