@@ -51,12 +51,54 @@
     border-collapse: collapse;
     border-style: none;
   }
-    
+
+    /* Add a black background color to the top navigation */
+.topnav {
+  background-color: black;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: grey;
+  color: white;
+}
+
+ /* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+.logo {
+  position: left;
+}
   </style>
 </head>
   
 <header>
   <div class="topnav">
+  <a class="navbar-brand" href="#"><img id="logo" src="Warner Bros.jpeg" alt="Icon" height=40 weight=100%></a>
   <a class="active" href="index.html">Home</a>
   <a href="movies.html">Movies</a>
   <a href="shows.html">TV Shows</a>
