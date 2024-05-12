@@ -115,17 +115,60 @@ footer {
 footer p {
   font-size: 14px;
   margin: right;
-}
-.left-content {
-  justify-self: flex-start;
+
+  /* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: right;
+  text-decoration: none;
+  border-radius: 50%;
   justify-content: space-between;
 }
 
-.right-content {
-  justify-self: flex-end;
-  justify-content: space-between;
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
 }
 
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #333;
+  color: white;
+  position: right;
+}
+
+/* Youtube */
+.fa-youtube {
+  background: #333;
+  color: white;
+  position: right;
+}
+
+  /* Instagram */
+.fa-instagram {
+  background: #333;
+  color: white;
+  position: right;
+}
+
+  /* Pinterest */
+.fa-pinterest {
+  background: #333;
+  color: white;
+  position: right;
+}
+
+  /* Tiktok */
+.fa-tiktok {
+  background: #333;
+  color: white;
+  position: right;
+}
+  
 .image-container {
   background-color: #333;
 }
