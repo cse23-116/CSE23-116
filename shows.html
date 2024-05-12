@@ -90,8 +90,65 @@
   font-size: 17px;
 }
 
-.logo {
+.topnav .logo {
   position: left;
+}
+
+/* banner card style */
+
+.banner { 
+  margin-bottom: 60px; 
+}
+
+.banner-card {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.banner-card .banner-content {
+  position: absolute;
+  right:  80px;
+  bottom: 60px;
+  left:   80px;
+}
+
+.banner-card .banner-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.banner-card .banner-info div {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.banner-card .banner-info ion-icon {
+  font-size: 20px;
+  color: white;
+  margin-right: 5px;
+}
+
+.banner-card .banner-info span { 
+  font-weight: normal; 
+  color: white;
+}
+
+.banner-card .banner-info {
+  background: #00FFFF;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-weight: normal;
+}
+
+.banner-card .card-title {
+  font-size: 3em;
+  color: white;
+  text-shadow: 2px 0 2px #0007;
 }
     
   </style>
@@ -99,7 +156,7 @@
   
 <header>
     <div class="topnav">
-  <img id="logo" src="Warner Bros.jpeg" alt="Icon" height=40 weight=100%></a>
+  <img id="logo" src="Warner Bros.jpeg" alt="Icon" height=40 weight=100%>
   <a class="active" href="index.html">Home</a>
   <a href="movies.html">Movies</a>
   <a href="shows.html">TV Shows</a>
