@@ -250,10 +250,28 @@ nav {
 
 /* banner card style */
 
-.banner { 
-  margin-bottom: 60px; 
+/* Styles for the banner section */
+.banner {
+  position: relative;  /* Make the banner section the reference point for fixed video */
 }
 
+/* Styles for the video element */
+.banner video {
+  position: fixed;      /* Fix the video to the viewport */
+  top: 0;                /* Position video at the top */
+  left: 0;               /* Position video at the left */
+  width: 100%;           /* Stretch video to cover the entire width */
+  height: 100vh;         /* Stretch video to cover the entire viewport height */
+  object-fit: cover;     /* Ensure video fills the space while maintaining aspect ratio */
+  z-index: -1;           /* Place the video behind other banner content */
+}
+
+/* Styles for the banner content */
+.banner-content {
+  position: relative;  /* Allow absolute positioning of child elements within the banner */
+  text-align: left;   /* Align text content to the left within the banner */
+  color: #fff;          /* Set text color to white */
+}
 .banner-card {
   position: relative;
   height: 400px;
@@ -340,10 +358,15 @@ nav {
   color: var(--off-white); 
 }
   
- /* Add a black background color to the top navigation */
+/* Styles for the top navigation bar */
 .topnav {
-  background-color: black;
-  overflow: hidden;
+  background-color: black; /* Adjust background color */
+  color: white;            /* Adjust text color */
+  overflow: hidden;       /* Prevent horizontal scroll */
+  display: flex;          /* Arrange links horizontally */
+  justify-content: space-between; /* Distribute links evenly */
+  width: 100%;            /* Set width to 100% of the page */
+  padding: 10px 20px;      /* Add some padding */
 }
 
 /* Style the links inside the navigation bar */
