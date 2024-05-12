@@ -1,396 +1,44 @@
-body {
-  background-color: black;
-  font-family: 'Verdana', sans-serif;
-  margin: 0;
-  padding: 0;
+ body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .banner-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* Center content horizontally and vertically */
+      color: #fff;
+      text-align: center;
+    }
+
+.explore-button {
+  background-color: #fff; /* White background */
+  color: black;            
+  padding: 10px 20px;       /* Add padding */
+  border: none;             /* Remove border */
+  border-radius: 5px;       /* Add rounded corners */
+  cursor: pointer;          /* Change cursor on hover */
+  text-decoration: none;   /* Remove underline from link */
+  font-weight: bold;        /* Make text bold */
+  transition: all 0.3s ease-in-out; /* Add smooth transition effect */
 }
 
-/*Header Styles*/
-header {
-  background-color: white;
-  padding: 10px;
+.explore-button:hover {
+  background-color: #0069d9; /* Change background color on hover */
 }
-
-nav ul {
-  display: inline;
-  margin-right: 10px;
-}
-
-nav a {
-  color: black;
-  text-decoration: none;
-}
-
-.scroll-container {
-  overflow-x: scroll;
-  white-space: nowrap;
-}
-
-.scroll-content {
-  width: 100%;
-  display: inline-block;
-}
-
-.scroll-content img {
-  width: 200px;
-  height: 300px;
-}
-
-.polaroid {
-  position: relative;
-  display: inline-block;
-  margin: 10px;
-  color: white;
-}
-
-.polaroid:hover img {
-  transform:scale(1.1);
-}
-
-.polaroid img {
-  width: 200px;
-  height: 300px;
-  border: 10px solid black;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transform: rotate(-2deg);
-}
-
-.polaroid .caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 200px;
-  padding: 10px;
-  background-color: black;
-  text-align: center;
-  font-weight: bold;
-  color: white;
-}
-
-/* Movies Section Styles */
-.movies {
-  padding: 50px 0;
-}
-
-.movies h2 {
-  color: white;
-  font-size: 24px;
-  margin-bottom: 20px;
-  font-family: 'Verdana', sans-serif;
-}
-
-/* TV Shows Section Styles */
-.tv-shows {
-  padding: 50px 0;
-}
-
-.tv-shows h2 {
-  color: white;
-  font-size: 24px;
-  margin-bottom: 20px;
-  font-family: 'Verdana', sans-serif;
-}
-
-/* News Section Styles */
-.news {
-  padding: 50px 0;
-}
-
-.news h2 {
-  color: white;
-  font-size: 24px;
-  margin-bottom: 20px;
-  font-family: 'Verdana', sans-serif;
-}
-
-/* Footer Styles */
-footer {
-  background-color: #424949;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  display: flex;
-}
-
-footer p {
-  font-size: 14px;
-  margin: 0px 0px 0px 30px;
-
-  /* Style all font awesome icons */
-.fa {
-  padding: 40px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-}
-
-/* Add a hover effect if you want */
-.fa:hover {
-  opacity: 0.7;
-}
-
-/* Set a specific color for each brand */
-
-/* Facebook */
-.fa-facebook {
-  background: #333;
-  color: white;
-  margin: 0px 0px 0px 50px;
-}
-
-/* Youtube */
-.fa-youtube {
-  background: #333;
-  color: white;
-  margin: 0px 0px 0px 100px;
-}
-
-  /* Instagram */
-.fa-instagram {
-  background: #333;
-  color: white;
-  margin: 0px 0px 0px 150px;
-}
-
-  /* Pinterest */
-.fa-pinterest {
-  background: #333;
-  color: white;
-  margin: 0px 0px 0px 200px;
-}
-
-  /* Tiktok */
-.fa-tiktok {
-  background: #333;
-  color: white;
-  margin: 0px 0px 0px 250px;
-}
-  
-.image-container {
-  background-color: #333;
-}
-
-/* Games Section Styles */
-.games {
-  padding: 50px 0;
-}
-
-.games h2 {
-  color: white;
-  font-size: 24px;
-  margin-bottom: 20px;
-  font-family: 'Verdana', sans-serif;
-}
-
-body {
-  background: black; 
-}
-
-.section-heading {
-  font-size: var(--section-heading);
-  font-weight: normal;
-  margin-bottom: 60px;
-}
-
-/* main container style */
-
-.container {
-  max-width: 1440px;
-  margin: auto;
-}
-
-/* navbar style */
-
-.navbar {
-  height: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: left;
-}
-
-/* small screen menu button style */
-
-.navbar-menu-btn { 
-  display: none; 
-}
-
-/* navbar navigation style */
-
-nav {
-  margin-right: 200px; 
-}
-
-.navbar-nav {
-  display: flex; 
-}
-
-.navbar-nav li:not(:last-child) {
-  margin-right: 60px; 
-}
-
-.navbar-link {
-  font-size: var(--fs-sm);
-  font-weight: normal;
-}
-
-.navbar-link:hover {
-  color: #F0FFFF; 
-}
-
-/* Styles for the banner section */
-.banner {
-  position: relative;  /* Make the banner section the reference point for fixed video */
-}
-
-/* Styles for the video element */
-.banner video {
-  position: fixed;      /* Fix the video to the viewport */
-  top: 0;                /* Position video at the top */
-  left: 0;               /* Position video at the left */
-  width: 100%;           /* Stretch video to cover the entire width */
-  height: 100vh;         /* Stretch video to cover the entire viewport height */
-  object-fit: cover;     /* Ensure video fills the space while maintaining aspect ratio */
-  z-index: -1;           /* Place the video behind other banner content */
-}
-
-/* Styles for the banner content */
-.banner-content {
-  position: relative;  /* Allow absolute positioning of child elements within the banner */
-  text-align: left;   /* Align text content to the left within the banner */
-  color: #fff;          /* Set text color to white */
-}
-.banner-card {
-  position: relative;
-  height: 400px;
-  overflow: hidden;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.banner-card .banner-content {
-  position: absolute;
-  right:  80px;
-  bottom: 60px;
-  left:   80px;
-}
-
-.banner-card .banner-info {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.banner-card .banner-info div {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-}
-
-.banner-card .banner-info ion-icon {
-  font-size: 20px;
-  color: white;
-  margin-right: 5px;
-}
-
-.banner-card .banner-info span { 
-  font-weight: normal; 
-  color: white;
-}
-
-.banner-card .banner-info {
-  background: none;
-  padding: 2px 5px;
-  border-radius: 5px;
-  font-weight: normal;
-}
-
-.banner-card .card-title {
-  font-size: 3em;
-  color: white;
-  text-shadow: 2px 0 2px #0007;
-}
-
-/* navbar form & button style */
-.navbar-form {
-  position: relative;
-  margin-right: 50px;
-}
-
-.navbar-form-search {
-  background: var(--oxford-blue);
-  width: 100%;
-  padding: 12px 20px;
-  border-radius: 15px;
-  color: var(--off-white);
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-5);
-}
-
-.navbar-form-btn {
-  background: var(--oxford-blue);
-  position: absolute;
-  top:   calc(50% - 10px);
-  right: 10px;
-}
-
-.navbar-form-btn ion-icon,
-.navbar-search-btn ion-icon {
-  font-size: 20px;
-  color: var(--light-azure);
-  --ionicon-stroke-width: 50px;
-}
-
-.navbar-form-btn:hover ion-icon,
-.navbar-form-search::placeholder { 
-  color: var(--off-white); 
-}
-  
-/* Styles for the top navigation bar */
-.topnav {
-  background-color: black; /* Adjust background color */
-  color: white;            /* Adjust text color */
-  overflow: hidden;       /* Prevent horizontal scroll */
-  display: flex;          /* Arrange links horizontally */
-  justify-content: space-between; /* Distribute links evenly */
-  width: 100%;            /* Set width to 100% of the page */
-  padding: 10px 20px;      /* Add some padding */
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: grey;
-  color: white;
-}
-
- /* Style the search box inside the navigation bar */
-.topnav input[type=text] {
-  float: right;
-  padding: 6px;
-  border: none;
-  margin-top: 8px;
-  margin-right: 16px;
-  font-size: 17px;
-}
-
- .logo {
-  position: left;
-}
-
