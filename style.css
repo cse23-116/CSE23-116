@@ -3,6 +3,10 @@
       overflow: hidden;
     }
 
+h1, h6 {
+ font-family: "Verdana", sans-serif;
+}
+
     .video-container {
       position: fixed;
       top: 0;
