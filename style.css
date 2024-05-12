@@ -283,8 +283,8 @@ nav {
   color: white;
 }
 
-.banner-card .banner-info .quality {
-  background: #00FFFF;
+.banner-card .banner-info {
+  background: none;
   padding: 2px 5px;
   border-radius: 5px;
   font-weight: normal;
