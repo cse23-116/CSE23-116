@@ -339,8 +339,8 @@ nav {
 .navbar-form-search::placeholder { 
   color: var(--off-white); 
 }
-
-/* Add a black background color to the top navigation */
+  
+ /* Add a black background color to the top navigation */
 .topnav {
   background-color: black;
   overflow: hidden;
