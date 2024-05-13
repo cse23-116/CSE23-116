@@ -3,6 +3,7 @@
   <head>
     <title>Feedback Form</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
       body {
         background-image: url('background.webp');
@@ -45,35 +46,6 @@
         background-color: #45a049;
       }
 
-.feedback-cards {
-  display: flex; /* Arrange cards horizontally */
-  flex-wrap: wrap;  /* Allow cards to wrap on multiple lines */
-  justify-content: space-between; /* Distribute cards evenly */
-  margin: 20px auto; /* Add margin for spacing */
-}
-
-.feedback-card {
-  background-color: #f5f5f5; /* Light background color */
-  padding: 5px;
-  border-radius: 5px; /* Rounded corners */
-  margin: 5px; /* Add spacing between cards */
-  text-align: center; /* Center content within the card */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-}
-
-.feedback-card img {
-  width: 100px; /* Adjust image width as needed */
-  height: 100px; /* Adjust image height as needed */
-  border-radius: 50%; /* Make image circular */
-  margin-bottom: 10px; /* Add space between image and text */
-}
-
-.feedback-card h3 {
-  font-weight: bold; /* Make name/source bold */
-  margin-bottom: 5px; /* Add space between name/source and text */
-}
-
-
     </style>
   </head>
 
@@ -111,20 +83,26 @@
   </form>
 </nav>
     </header>
-
-    
+ 
   <body>
-    <div class="feedback-cards">
-  <div class="feedback-card">
-    <img src="Sofia.jpeg" alt="Person 1"> <h3>Sofia</h3> <p>"This website is visually appealing! I love the sleek design"</p>
+   <div class="container mt-3">
+  <h2>Customer Feedbacks:</h2>
+  <br>
+  <div class="media border p-3">
+    <img src="Sofia.jpeg" alt="Sofia" class="mr-3 mt-3 rounded-circle" style="width:60px;">
+    <div class="media-body">
+      <h4>Sofia <small><i>Posted on February 19, 2023</i></small></h4>
+      <p>This website is visually appealing! I love the sleek design</p>
+      <div class="media p-3">
+        <img src="Jerry.jpeg" alt="Jerry" class="mr-3 mt-3 rounded-circle" style="width:45px;">
+        <div class="media-body">
+          <h4>Jerry <small><i>Posted on October 20 2023</i></small></h4>
+          <p>The movie selection on the website is fantastic! There are so many genres to choose from.</p>
+        </div>
+      </div>  
+    </div>
   </div>
-  <div class="feedback-card">
-    <img src="Bella.jpeg" alt="Person 2"> <h3>Bella</h3> <p>"I appreciate how the movie website provides detailed information about each film."</p>
-  </div>
-  <div class="feedback-card">
-    <img src="Jerry.jpeg" alt="Person 3"> <h3>Jerry</h3> <p>"The movie selection on the website is fantastic! There are so many genres to shoose from."</p>
-  </div>
-  </div>
+</div>
 
    
     <h1>Feedback Form</h1>
