@@ -52,42 +52,6 @@
     border-style: none;
   }
 
-/* Add a black background color to the top navigation */
-.topnav {
-  background-color: black;
-  overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
- /* Style the search box inside the navigation bar */
-.topnav input[type=text] {
-  float: right;
-  padding: 6px;
-  border: none;
-  margin-top: 8px;
-  margin-right: 16px;
-  font-size: 17px;
-}
-
-.topnav .logo {
-  position: left;
-}
-
 /* banner card style */
 
 .banner { 
@@ -149,16 +113,38 @@
 </head>
   
 <header>
-<div class="topnav">
-  <img id="logo" src="Warner Bros.jpeg" alt="Icon" height=40 weight=100%>
-  <a href="index.html">Home</a>
-  <a href="movies.html">Movies</a>
-  <a href="shows.html">TV Shows</a>
-  <a href="games.html">Games & Apps</a>
-  <a href="collections.html">Collections</a>
-  <a href="feedback.html">Feedback</a>
-  <input type="text" placeholder="Search...">
-</div>
+ <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Logo -->
+  <a class="navbar-brand" href="#">
+    <img src="Warner Bros.jpeg" alt="logo" style="width:60px;">
+  </a>
+  
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="movies.html">Movies</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="shows.html">TV Shows</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="">Games & Apps </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="">Collections</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="feedback.html">Feedback</a>
+    </li>
+  </ul>
+  <form class="form-inline" action="/action_page.php">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+    <button class="btn btn-success" type="submit">Search</button>
+  </form>
+</nav>
 </header>
 
 <body>
