@@ -94,12 +94,6 @@
   color: black;
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: grey;
-  color: white;
-}
-
  /* Style the search box inside the navigation bar */
 .topnav input[type=text] {
   float: right;
@@ -122,7 +116,7 @@
   <!--- navbar navigation -->
 <div class="topnav">
   <img id="logo" src="Warner Bros.jpeg" alt="Icon" height=40>
-  <a class="active" href="#home">Home</a>
+  <a href="#home">Home</a>
   <a href="movies.html">Movies</a>
   <a href="shows.html">TV Shows</a>
   <a href="games.html">Games & Apps</a>
@@ -140,7 +134,10 @@
     <button class="navbar-form-close">
         <ion-icon name="close-circle-outline"></ion-icon>
     </button>
+    </header>
 
+    
+  <body>
     <div class="feedback-cards">
   <div class="feedback-card">
     <img src="Sofia.jpeg" alt="Person 1"> <h3>Sofia</h3> <p>"This website is visually appealing! I love the sleek design"</p>
@@ -152,9 +149,7 @@
     <img src="Jerry.jpeg" alt="Person 3"> <h3>Jerry</h3> <p>"The movie selection on the website is fantastic! There are so many genres to shoose from."</p>
   </div>
   </div>
-  </header>
 
-  <body>
    
     <h1>Feedback Form</h1>
     <form action="/submit-feedback" method="POST" onsubmit="displayRandomFeedback()">
