@@ -45,62 +45,61 @@
     border-style: none;
   }
 
-* {box-sizing:border-box}
-    
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
+/* banner card style */
+
+.banner { 
+  margin-bottom: 60px; 
+}
+
+.banner-card {
   position: relative;
-  margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
+  height: 400px;
+  overflow: hidden;
+  border-radius: 20px;
   cursor: pointer;
+}
+
+.banner-card .banner-content {
   position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
+  right:  80px;
+  bottom: 60px;
+  left:   80px;
+}
+
+.banner-card .banner-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.banner-card .banner-info div {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.banner-card .banner-info ion-icon {
+  font-size: 20px;
   color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+  margin-right: 5px;
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.banner-card .banner-info span { 
+  font-weight: normal; 
+  color: white;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.banner-card .banner-info {
+  background: none;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-weight: normal;
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+.banner-card .card-title {
+  font-size: 3em;
+  color: white;
+  text-shadow: 2px 0 2px #0007;
 }
   </style>
 </head>
@@ -141,31 +140,37 @@
 </header>
 
 <body>
-<!-- Slideshow container -->
-<div class="slideshow-container">
+   <!--- #BANNER SECTION -->
+      <section class="banner">
+        <div class="banner-card">
 
-  <!-- Full-width images with number and caption text -->
-  <div class="mySlides fade">
-    <img src="Maxxxine.jpeg" style="width:100%">
-    <div class="text">Maxxxine</div>
-  </div>
+  <video autoplay muted loop poster="Nowhere.mp4">
+    <source src="Nowhere.mp4" type="video/mp4">
+  </video>
 
-  <div class="mySlides fade">
-    <img src="The Pope's Exorcist.jpeg" style="width:100%">
-    <div class="text">The Pope's Exorcist</div>
-  </div>
+          <div class="banner-content">
+            <div class="banner-info">
 
-  <div class="mySlides fade">
-    <img src="The Lion King.jpeg" style="width:100%">
-    <div class="text">The Lion King</div>
-  </div>
+              <div class="genre">
+                <ion-icon name="film"></ion-icon>
+                <span>Drama/Thriller</span>
+              </div>
 
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
+              <div class="year">
+                <ion-icon name="calendar"></ion-icon>
+                <span>2023</span>
+              </div>
 
+              <div class="duration">
+                <ion-icon name="time"></ion-icon>
+                <span>1h 49m </span>
+              </div>
+            </div>
+            <h2 class="card-title">Nowhere</h2>
+          </div>
+
+        </div>
+      </section>
 
   <table>
     <tr>
