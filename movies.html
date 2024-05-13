@@ -90,11 +90,11 @@
 </header>
 
 <body>
-  <div id="featured-movies-carousel" class="carousel slide" data-ride="carousel">
+  <div id="#myCarousel" class="carousel slide" data-ride="carousel">
   <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active"></li>
-    <li data-target="#demo" data-slide-to="1"></li>
-    <li data-target="#demo" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
   </ul>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -119,18 +119,50 @@
       </div>   
     </div>
   </div>
-  <a class="carousel-control-prev" href="featured-movies-carousel" role ="button"data-slide="prev">
+  <a class="carousel-control-prev" href="#myCarousel" role ="button"data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous Slide></span>
   </a>
-  <a class="carousel-control-next" href="featured-movies-carousel" role="button"data-slide="next">
+  <a class="carousel-control-next" href="#myCarousel" role="button"data-slide="next">
     <span class="carousel-control-next-icon"></span>
     <span class="visually-hidden">Next Slide></span>
   </a>
-    <script>
-    var myCarousel = document.getElementById('featured-movies-carousel');
-    var carousel = new bootstrap.Carousel(myCarousel);
-    </script>
+   <script>
+$(document).ready(function(){
+  // Activate the Carousel, but pause it from the start
+  $("#myCarousel").carousel("pause");
+        
+  // Go to the second item
+  $("#myBtn").click(function(){
+    $("#myCarousel").carousel("prev");
+  });
+
+  // Go to the third item
+  $("#myBtn2").click(function(){
+    $("#myCarousel").carousel("next");
+  });
+    
+  // Enable Carousel Indicators
+  $(".item1").click(function(){
+    $("#myCarousel").carousel(0);
+  });
+  $(".item2").click(function(){
+    $("#myCarousel").carousel(1);
+  });
+  $(".item3").click(function(){
+    $("#myCarousel").carousel(2);
+  });
+    
+  // Enable Carousel Controls
+  $(".carousel-control-prev").click(function(){
+    $("#myCarousel").carousel("prev");
+  });
+  $(".carousel-control-next").click(function(){
+    $("#myCarousel").carousel("next");
+  });
+});
+</script>
+
 </div>
 
 
