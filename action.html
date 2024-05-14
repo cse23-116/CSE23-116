@@ -15,74 +15,7 @@
     justify-content: center;
     background-color: black;
   }
-
-  .slide-container {
-    max-width: 1120px;
-    width: 100%;
-    background-color: #1B2631;
-    padding: 40px 0;
-  }
-    
-  .slide-content {
-    margin: 0 40px;
-  }
-
-  .card {
-    width: 320px;
-    border-radius: 25px;
-    background-color: #FFF;
-  }
-
-  .image-content,
-  .card-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 14px;
-  }
-
-  .image-content {
-    position: relative;
-    row-gap: 5px;
-  }
-
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    border-radius: 25px 25px 0 25px;
-  }
   
-  .card-image {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    background: #FFF;
-    padding: 3px;
-  }
- .card-image .card-img {
-   height: 100%;
-   width: 100%;
-   object-fit: cover;
-   border-radius:50%;
-   border: 4px solid blue;
- }
-
-  .name {
-    font-size: 18px;
-    font-weight: 500;
-    color: #333;
-  }
-
-  .description {
-    font-size: 14px;
-    color: #707070;
-    text-align: center;
-  }
 </style>
 </head>
 
@@ -114,26 +47,55 @@
 </header>
 
   <body>
-
-  <div class="slide-container">
-    <div class="slide-content">
-      <div class="card-wrapper">
-        <div class="card">
-          <div class="image-content">
-            <span class="overlay"></span>
-
-            <div class="card-image">
-              <img src="Shaft.jpeg" alt="Shaft" class="card-img">
+<div id="carouselExample" class="carousel carousel-dark slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+          <div class="cards-wrapper"> 
+            <div class="card">
+              <img src="Shaft.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
             </div>
-          </div>
-          <div class="card-content">
-            <h2 class="name">Shaft</h2>
-            <p class="description"></p>
-        </div>
-      </div>
-    </div>
-  </div>
-    
+            <div class="card">
+              <img src="Shaft.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+            <div class="card">
+              <img src="Shaft.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+               </div>
+            <div class="card">
+              <img src="Shaft.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+                </div>
+            <div class="card">
+              <img src="Shaft.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          </div>
+
+
+
 <div class="container">
   <div class="panel panel-default">
     <div class="panel-footer">
