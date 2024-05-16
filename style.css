@@ -46,3 +46,30 @@ h1, h6 {
 .explore-button:hover {
   background-color: #0069d9; /* Change background color on hover */
 }
+
+/* Styles for medium screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+  /* Change background color and font size for medium screens */
+  body {
+    background-color: #ccc;
+    font-size: 14px;
+  }
+}
+
+/* Styles for small screens (max-width: 600px) */
+@media (max-width: 600px) {
+  /* Change background color and font size for small screens */
+  body {
+    background-color: #999;
+    font-size: 12px;
+  }
+}
+
+/* Styles for extra small screens (max-width: 320px) */
+@media (max-width: 320px) {
+  /* Change background color and font size for extra small screens */
+  body {
+    background-color: #666;
+    font-size: 10px;
+  }
+}
