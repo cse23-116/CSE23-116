@@ -1,0 +1,77 @@
+  body {
+    background-color: black;
+  }
+
+  div.gallery {
+  margin: 5px;
+  border-style: outset #ccc;
+  float: left;
+  width: 300px;
+}
+
+  div.gallery:hover {
+  border: 1px solid #777;
+}
+
+  div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+ div.desc {
+  padding: 15px;
+  text-align: left;
+  color: white;
+}
+    
+ .clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-style: none;
+  }
+
+  .container {
+  display: flex; /* Make container a flex container */
+}
+
+.image-container {
+  width: 200px; /* Adjust image width as needed */
+  margin-right: 20px; /* Add margin for spacing */
+  height: 100%;
+}
+
+.image-button {
+  background-color: #fff; /* White background */
+  color: black;            
+  padding: 10px 20px;       /* Add padding */
+  border: none;             /* Remove border */
+  border-radius: 5px;       /* Add rounded corners */
+  cursor: pointer;          /* Change cursor on hover */
+  text-decoration: none;   /* Remove underline from link */
+  font-weight: bold;        /* Make text bold */
+  transition: all 0.3s ease-in-out; /* Add smooth transition effect */
+}
+
+.image-button:hover {
+  background-color: #0069d9; /* Change background color on hover */
+}
+
+.carousel-item {
+  position: relative;
+  color: white;
+  height: 32rem;
+}
+
+.container {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 50px;
+}
