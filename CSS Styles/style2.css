@@ -1,0 +1,23 @@
+body {
+    background-color: black;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-style: none;
+  }
+    
+ div.card:hover {
+   opacity: 0.8;
+ }
+
+div.panel-footer {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+div.panel-footer a {
+  display: inline;
+}
