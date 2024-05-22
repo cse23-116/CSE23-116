@@ -15,4 +15,12 @@
       // Call the function to display a random message on page load
   displayRandomFeedback();
 
+// Get the submit button
+var submitFeedback = document.getElementById("submit-feedback");
 
+// Add a click event listener to the submit button
+submitFeedback.addEventListener("click", function() {
+  // Display the message "Thank you for your feedback"
+  var feedbackContainer = document.getElementById("feedback-container");
+  feedbackContainer.innerHTML = "Thank you for your feedback";
+});
