@@ -15,10 +15,12 @@
       // Call the function to display a random message on page load
   displayRandomFeedback();
 
-//Function to display the thank you message
-  function thankYouMessage() {
-    var thankYouContainer = document.createElement("p");
-    thankYouContainer.textContent = "Thank you for your feedback";
-    document.body.appendChild(thankYouContainer);
-    return false; //Prevent the form from submitting
-  }
+/ Get the submit button
+var submitFeedback = document.getElementById("submit-feedback");
+
+// Add a click event listener to the submit button
+submitFeedback.addEventListener("click", function() {
+  // Display the message "Thank you for your feedback"
+  var feedbackContainer = document.getElementById("feedback-container");
+  feedbackContainer.innerHTML = "Thank you for your feedback";
+});
